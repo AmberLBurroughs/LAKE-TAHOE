@@ -61,9 +61,9 @@ a:active {
 .main-header {
   padding-top: 170px;
   height: 850px;
+
   background: #ffa949 url('../img/mountains.jpg') no-repeat center;
   background-size: cover;
-  
 }
 
 .title {
@@ -91,6 +91,7 @@ a:active {
   padding-top: 80px;
   padding-bottom: 70px;
   border-bottom: 2px solid #dfe2e6;
+ /* overflow: auto; */
 }
 
 .callout {
@@ -124,19 +125,38 @@ a:active {
 
 .wildlife {
   color: white;
-  background-color: #434a52;
+  text-align: left;
   padding: 18% 24%;
   border-top: 10px solid #ffa949;
   margin: 105px 0 60px;
+  background: #434a52 url('../img/bear.jpg') no-repeat center;
+  background-size: cover;
 }
 
 .arrow {
   width: 50px;
 }
 
+/* floated-columns ------------------ */
+
+.resorts,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: right;
+}
+
+.resorts {
+  float: left;
+}
 
 
+/* Float Clearfix ------------------ */
 
-
-
-
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
